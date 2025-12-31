@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dibas Chaudhary | Portfolio</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #020617; color: white; overflow-x: hidden; }
+        canvas { position: fixed; top: 0; left: 0; z-index: -1; }
+        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        .gradient-text { background: linear-gradient(to right, #10b981, #3b82f6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        section { min-height: 100vh; display: flex; align-items: center; padding: 2rem; }
+    </style>
+</head>
+<body>
+
+    <div id="canvas-container"></div>
+
+    <nav class="fixed top-0 w-full z-50 p-6 flex justify-between items-center glass">
+        <div class="text-xl font-bold tracking-tighter">DC<span class="text-emerald-500">.</span></div>
+        <div class="space-x-8 hidden md:flex text-sm font-medium text-gray-300">
+            <a href="#about" class="hover:text-emerald-400 transition">About</a>
+            <a href="#education" class="hover:text-emerald-400 transition">Education</a>
+            <a href="#skills" class="hover:text-emerald-400 transition">Skills</a>
+            <a href="#contact" class="hover:text-emerald-400 transition">Contact</a>
+        </div>
+    </nav>
+
+    <section id="hero" class="relative overflow-hidden">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+            <div class="animate-fade-in">
+                <h3 class="text-emerald-500 font-semibold mb-4 tracking-widest uppercase text-sm">Welcome</h3>
+                <h2 class="text-6xl md:text-8xl font-bold mb-6">Dibas <br><span class="gradient-text">Chaudhary</span></h2>
+                <p class="text-xl text-gray-400 mb-8 max-w-md">Forestry Student 🌳</p>
+                <div class="flex space-x-4">
+                    <a href="#contact" class="px-8 py-3 bg-emerald-600 hover:bg-emerald-500 rounded-full font-semibold transition">Contact Me</a>
+                    <a href="#about" class="px-8 py-3 border border-gray-700 rounded-full font-semibold hover:bg-white/10 transition">View Portfolio</a>
+                </div>
+            </div>
+            <div class="relative flex justify-center">
+                <div class="w-80 h-80 md:w-96 md:h-96 rounded-3xl overflow-hidden border-4 border-emerald-500/20 shadow-2xl shadow-emerald-500/10 rotate-3 hover:rotate-0 transition duration-500">
+                    <img src="abc.jpg" alt="Dibas Chaudhary" class="object-cover w-full h-full">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="bg-slate-900/50">
+        <div class="max-w-4xl mx-auto glass p-10 md:p-16 rounded-3xl">
+            <h3 class="text-3xl font-bold mb-8">About Me</h3>
+            <p class="text-gray-300 leading-relaxed text-lg mb-6">
+                I am <span class="text-emerald-400">Dibas Chaudhary</span>, a motivated learner currently beginning my trading journey in the Nepal Stock Exchange (NEPSE). I completed my Diploma in Forestry Science from Tikapur Polytechnic Institute.
+            </p>
+            <p class="text-gray-400 leading-relaxed">
+                Although my academic background is in forestry, I have a strong interest in modern technology. I enjoy exploring how digital tools and data analysis can revolutionize financial markets and environmental science.
+            </p>
+        </div>
+    </section>
+
+    <section id="education">
+        <div class="max-w-6xl mx-auto w-full grid md:grid-cols-2 gap-8">
+            <div class="glass p-8 rounded-2xl">
+                <h3 class="text-2xl font-bold mb-6 flex items-center">🎓 Education</h3>
+                <div class="space-y-6">
+                    <div>
+                        <h4 class="text-emerald-400 font-semibold text-lg">Diploma in Forestry Science</h4>
+                        <p class="text-sm text-gray-500">Tikapur Polytechnic Institute | 2079–2082</p>
+                    </div>
+                    <div>
+                        <h4 class="text-emerald-400 font-semibold text-lg">Diploma in Computer Application</h4>
+                        <p class="text-sm text-gray-500">IT Computer Institute</p>
+                    </div>
+                </div>
+            </div>
+            <div class="glass p-8 rounded-2xl">
+                <h3 class="text-2xl font-bold mb-6 flex items-center">🛠️ Skills</h3>
+                <div class="flex flex-wrap gap-3">
+                    <span class="px-4 py-2 bg-emerald-500/10 border border-emerald-500/30 rounded-lg text-emerald-400">Forestry Management</span>
+                    <span class="px-4 py-2 bg-blue-500/10 border border-blue-500/30 rounded-lg text-blue-400">NEPSE Trading</span>
+                    <span class="px-4 py-2 bg-purple-500/10 border border-purple-500/30 rounded-lg text-purple-400">IT & Computing</span>
+                    <span class="px-4 py-2 bg-orange-500/10 border border-orange-500/30 rounded-lg text-orange-400">Data Analysis</span>
+                    <span class="px-4 py-2 bg-pink-500/10 border border-pink-500/30 rounded-lg text-pink-400">Analytical Thinking</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="max-w-4xl mx-auto w-full text-center">
+            <h2 class="text-4xl font-bold mb-4">Let's Connect</h2>
+            <p class="text-gray-400 mb-12">Currently based in Joshipur, Kailali, Nepal.</p>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="p-6 glass rounded-xl">
+                    <div class="text-emerald-500 mb-4 font-bold text-xl">Email</div>
+                    <a href="mailto:dibaschaudhary550@gmail.com" class="text-sm break-all text-gray-300">dibaschaudhary550@gmail.com</a>
+                </div>
+                <div class="p-6 glass rounded-xl">
+                    <div class="text-emerald-500 mb-4 font-bold text-xl">Phone</div>
+                    <p class="text-gray-300">9822683067 <br> 9705327621</p>
+                </div>
+                <div class="p-6 glass rounded-xl">
+                    <div class="text-emerald-500 mb-4 font-bold text-xl">Goal</div>
+                    <p class="text-gray-300 text-sm">Combining Forestry with Fintech</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        document.getElementById('canvas-container').appendChild(renderer.domElement);
+
+        // Add Floating Particles
+        const particlesGeometry = new THREE.BufferGeometry();
+        const counts = 2000;
+        const positions = new Float32Array(counts * 3);
+        for(let i=0; i<counts*3; i++) {
+            positions[i] = (Math.random() - 0.5) * 10;
+        }
+        particlesGeometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+        const particlesMaterial = new THREE.PointsMaterial({ size: 0.005, color: '#10b981' });
+        const particles = new THREE.Points(particlesGeometry, particlesMaterial);
+        scene.add(particles);
+
+        camera.position.z = 3;
+
+        function animate() {
+            requestAnimationFrame(animate);
+            particles.rotation.y += 0.001;
+            particles.rotation.x += 0.0005;
+            renderer.render(scene, camera);
+        }
+        animate();
+
+        window.addEventListener('resize', () => {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        });
+    </script>
+</body>
+</html>
